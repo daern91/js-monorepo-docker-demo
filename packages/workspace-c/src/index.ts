@@ -1,4 +1,4 @@
-function multiplier(x, y) {
+function multiplier(x: number, y: number): number {
   return x * y;
 }
 

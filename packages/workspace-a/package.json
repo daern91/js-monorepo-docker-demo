@@ -1,7 +1,7 @@
 {
   "name": "workspace-a",
   "version": "1.0.0",
-  "dependencies": {
-    "workspace-b": "*"
+  "devDependencies": {
+    "typescript": "3.2.1"
   }
 }

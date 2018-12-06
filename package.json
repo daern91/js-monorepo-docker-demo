@@ -1,8 +1,17 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "w:a": "node packages/workspace-a/lib/index.js",
+    "w:c": "node packages/workspace-c/lib/index.js",
+    "tsc": "tsc -b packages/**/"
+  },
   "devDependencies": {
-    "prettier": "^1.15.3"
+    "@types/node": "^10.12.12",
+    "prettier": "^1.15.3",
+    "typescript": "^3.2.1"
   }
 }
