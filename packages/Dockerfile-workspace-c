@@ -7,6 +7,5 @@ COPY ./workspace-c/package.json .
 COPY ./workspace-c/tsconfig.json .
 
 RUN yarn
-RUN yarn tsc
 
 CMD node ./lib/index.js

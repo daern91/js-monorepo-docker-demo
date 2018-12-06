@@ -13,6 +13,5 @@ COPY ./workspace-b/package.json ./packages/workspace-b/.
 COPY ./workspace-b/tsconfig.json ./packages/workspace-b/.
 
 RUN yarn
-RUN yarn tsc
 
 CMD node ./packages/workspace-a/lib/index.js

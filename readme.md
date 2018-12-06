@@ -2,9 +2,8 @@
 All below commands are to be executed from `root` folder.
 
 #### Local install
-1. Run `yarn` to install all dependencies, this installs them correctly both in root and links local dependencies together. 
-2. Run `yarn tsc` to type-check and build files.
-3. Run `yarn w:a` to run program in `workspace-a` and `yarn w:c` for `workspace-c`
+1. Run `yarn` to install all dependencies, this installs them correctly both in root and links local dependencies together. The `postinstall` hook will also run `yarn tsc` to type-check and build files.
+2. Run `yarn test` which runs both scripts `yarn w:a` and `yarn w:c` to run programs in `workspace-a` for `workspace-c`
 
 #### Individual docker builds
 1. Build `workspace-a` image with

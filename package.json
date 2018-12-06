@@ -5,9 +5,11 @@
     "packages/*"
   ],
   "scripts": {
+    "postinstall": "yarn tsc",
     "w:a": "node packages/workspace-a/lib/index.js",
     "w:c": "node packages/workspace-c/lib/index.js",
-    "tsc": "tsc -b packages/**/"
+    "tsc": "tsc -b packages/**/",
+    "test": "yarn w:a & yarn w:c && echo should have printed 100 and 20$'\n'"
   },
   "devDependencies": {
     "@types/node": "^10.12.12",
