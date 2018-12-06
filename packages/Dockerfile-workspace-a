@@ -4,8 +4,15 @@ ARG package_json
 RUN echo "$package_json" > ./package.json
 RUN cat ./package.json
 
-COPY ./workspace-a ./packages/workspace-a
-COPY ./workspace-b ./packages/workspace-b
-RUN yarn
+COPY ./workspace-a/src ./packages/workspace-a/src
+COPY ./workspace-a/package.json ./packages/workspace-a/.
+COPY ./workspace-a/tsconfig.json ./packages/workspace-a/.
 
-CMD node ./packages/workspace-a/src/index.js
+COPY ./workspace-b/src ./packages/workspace-b/src
+COPY ./workspace-b/package.json ./packages/workspace-b/.
+COPY ./workspace-b/tsconfig.json ./packages/workspace-b/.
+
+RUN yarn
+RUN yarn tsc
+
+CMD node ./packages/workspace-a/lib/index.js
