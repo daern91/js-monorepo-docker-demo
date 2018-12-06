@@ -1,0 +1,11 @@
+FROM node:lts-alpine
+WORKDIR "/root"
+ARG package_json
+RUN echo "$package_json" > ./package.json
+RUN cat ./package.json
+
+COPY ./workspace-a ./packages/workspace-a
+COPY ./workspace-b ./packages/workspace-b
+RUN yarn
+
+CMD node ./packages/workspace-a/src/index.js

@@ -1,7 +1,7 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": ["packages/workspace-a", "packages/workspace-b"],
+  "workspaces": ["packages/*"],
   "devDependencies": {
     "prettier": "^1.15.3"
   }
