@@ -2,7 +2,6 @@ FROM node:lts-alpine
 WORKDIR "/root"
 ARG package_json
 RUN echo "$package_json" > ./package.json
-RUN cat ./package.json
 
 COPY ./workspace-a/src ./packages/workspace-a/src
 COPY ./workspace-a/package.json ./packages/workspace-a/.
