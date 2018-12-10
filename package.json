@@ -1,7 +1,19 @@
 {
   "name": "root",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "yarn tsc",
+    "w:a": "node packages/workspace-a/lib/index.js",
+    "w:c": "node packages/workspace-c/lib/index.js",
+    "tsc": "tsc -b packages/**/",
+    "test": "yarn w:a & yarn w:c && echo should have printed 100 and 20$'\n'"
+  },
   "devDependencies": {
-    "lerna": "^3.5.1"
+    "@types/node": "^10.12.12",
+    "prettier": "^1.15.3",
+    "typescript": "^3.2.1"
   }
 }

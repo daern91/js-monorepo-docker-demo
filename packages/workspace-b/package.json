@@ -1,0 +1,8 @@
+{
+  "name": "workspace-b",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "devDependencies": {
+    "typescript": "3.2.1"
+  }
+}

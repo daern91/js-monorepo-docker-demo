@@ -1,0 +1,11 @@
+FROM node:lts-alpine
+
+WORKDIR "/app"
+
+COPY ./workspace-c/src ./src
+COPY ./workspace-c/package.json .
+COPY ./workspace-c/tsconfig.json .
+
+RUN yarn
+
+CMD node ./lib/index.js
